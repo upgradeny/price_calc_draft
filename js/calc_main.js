@@ -567,6 +567,84 @@ $(document).ready(function(){
 				var acessory_cost_price_total = 0;
 				var acessory_retail_price_total = 0;
 				
+				/*----------------Acessories Row containing price Markup starts  -------------------------*/
+				
+				$('.acessories_price_item').each(function () {
+					
+					if( jQuery(this).val() ) 
+					{
+						
+						var acessories_item_cost_price = round_2_digits(  Number( jQuery(this).val() ) );
+						var acessories_item_markup_value = Number( $(this).parent().parent().parent().find('.acessories_markup_select').val() );
+						var acessories_item_markup_price = round_2_digits(  Number( acessories_item_cost_price * acessories_item_markup_value ) );
+						//console.log('acessories_item_cost_price' , acessories_item_cost_price , 'acessories_item_markup_value' , acessories_item_markup_value , 'acessories_item_markup_price',acessories_item_markup_price);
+						
+						totalCost += acessories_item_cost_price;
+						clientPrice += acessories_item_markup_price;
+
+						print_cost_table_sub +=  '<tr>' + 
+													'<td> Accessories </td>' +
+													'<td> $' + acessories_item_markup_price + ' </td>' +
+													'<td> N/A </td>' +
+													'<td> $' + acessories_item_cost_price + ' </td>' +
+													'<td> '  + ' - ' + ' </td>' +
+													'<td> '  + acessories_item_markup_value + ' </td>' +
+													'<td> - </td>' +
+													'<td> '  + ' - ' + ' </td>' +
+												'</tr>';
+												
+					}
+				});
+				
+				
+				$('.acessories_dropdown_list').each(function () {
+					
+					if( jQuery(this).val() ) 
+					{
+					
+						var qty = round_2_digits( jQuery(this).parent().parent().find('.acessories_qty').val() );
+						var acessory_cost_price = jQuery(this).val() ? round_2_digits( Number( jQuery(this).val() ) * qty ) : 0;
+						var acessory_list_price = jQuery(this).val() ? round_2_digits( Number( jQuery(this).find('option:selected').attr('data-list-price') ) * qty ) : 0;
+						var acessory_retail_percent = jQuery(this).val() ? round_2_digits( Number( jQuery(this).find('option:selected').attr('data-retail_percent') ) ) : 0;
+						
+						var retail_multiplier = 1 - (acessory_retail_percent/100) ;
+						
+						
+						var acessory_retail_price = jQuery(this).val() ? round_2_digits( acessory_list_price * (1 - (acessory_retail_percent/100)) ) : 0;
+
+						listprice = round_2_digits( listprice + acessory_list_price   );
+						totalCost += round_2_digits( acessory_cost_price  );
+						clientPrice += round_2_digits( acessory_retail_price );
+						
+						
+						acessory_retail_price_total += ( acessory_retail_price );
+						acessory_list_price_total += ( acessory_list_price);
+						acessory_cost_price_total += ( acessory_cost_price);	
+
+						print_cost_table_sub +=  '<tr>' + 
+													'<td> Accessories </td>' +
+													'<td> $' + acessory_retail_price + ' </td>' +
+													'<td> $' + acessory_list_price + ' </td>' +
+													'<td> $' + acessory_cost_price + ' </td>' +
+													'<td>' + $(this).find('option:selected').text()  + ' </td>' +
+													'<td> '  + ' - ' + ' </td>' +
+													'<td> '  + retail_multiplier + ' </td>' +
+													'<td> '  + ' - ' + ' </td>' +
+												'</tr>';
+
+						
+						/*
+						print_acessory_table_sub +=  '<tr>' + 
+													'<td>' + $(this).find('option:selected').text() + ' )</td>' +
+													'<td> ' + qty + ' </td>' +
+												'</tr>';
+												*/
+					}
+				
+				});
+				
+				
+				/*
 				console.log("totalCost" , totalCost);
 				$('.acessories_price_item').each(function () {
 					
@@ -624,7 +702,7 @@ $(document).ready(function(){
 					}
 				});
 				
-				
+				*/
 				/*----------------Acessories Row containing price Markup end  -------------------------*/
 				
 				
@@ -723,6 +801,10 @@ $(document).ready(function(){
 										'<td class="text-bold"> $' + numberWithCommas( round_2_digits( clientPrice ) ) + ' </td>' +
 										'<td class="text-bold"> $' + numberWithCommas( round_2_digits( listprice ) ) + ' </td>' +
 										'<td class="text-bold"> $' +  numberWithCommas( round_2_digits(totalCost) ) + ' </td>' +
+										'<td> ' + '  ' + ' </td>' +
+										'<td> ' + '  ' + ' </td>' +
+										'<td> ' + '  ' + ' </td>' +
+										'<td> ' + '  ' + ' </td>' +
 									'</tr>';
 									
 				print_cost_table += print_cost_table_sub;
