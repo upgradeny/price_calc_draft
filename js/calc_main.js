@@ -131,9 +131,7 @@ $(document).ready(function(){
 					
 					return '<div class="row input_field">' + 
 					'<div class="col-md-3">' + 
-						'<label>' + 
-							'Group ' + Alphabet_Array[num1] + 
-						'</label>' + 
+						
 						'<div class="input_field_n_dollar">' + 
 							'<input type="text" id="" class="number_req form-control description" name ="" value="Cabinets"/>' + 
 						'</div>' + 
@@ -141,9 +139,7 @@ $(document).ready(function(){
 					
 					'<div class="col-md-4">' + 
 							'<div class="select_field main_units">' + 
-								'<label>' + 
-									'Vendor' + 
-								'</label>' + 
+								
 								'<select id="main_unit" name ="main_unit" class="main_unit_dropdown" required="required">' + 
 									'<option name="" value="">Please Select Vendor</option>' + 
 									'<option name="Adornus" value="0.34" data-upcharge="215" data-surcharge="1"> Adornus </option>' + 
@@ -167,9 +163,7 @@ $(document).ready(function(){
 
 
 						'<div class="col-md-2">' + 
-							'<label>' + 
-								'Price' + 
-							'</label>' + 
+							
 							'<div class="input_field_n_dollar">' + 
 								'<span class="dollar_sign"> $ </span>' + 
 								'<input type="text" id="" class="number_req form-control list_price" name ="" value=""/>' + 
@@ -177,9 +171,7 @@ $(document).ready(function(){
 						'</div>' + 
 					
 					'<div class="col-md-2">' +
-							'<label>' +
-								'&nbsp;' +
-							'</label>' +
+							
 							'<div class="flex_subdiv">' +
 								'<label class="btn btn-secondary btn_l_c active" for="option1" >' +
 									'<input type="radio" class="btn-check list_price_option" name="list_price_options' + num1  + '" autocomplete="off" value="L" checked="checked" />' +
@@ -197,7 +189,7 @@ $(document).ready(function(){
 					
 					
 					
-					'<div class="col-md-1"> <label>&nbsp;</label> <button type="button" class="minus"> - </button></div>' + 
+					'<div class="col-md-1"> <button type="button" class="minus"> - </button></div>' + 
 				'</div>';
 					
 				}
