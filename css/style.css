@@ -1,5 +1,20 @@
 
 /*--===== General Style =====--*/
+
+@font-face {
+  font-family: 'Ysabeau-VariableFont_wght'; 
+  src: url('../fonts/Ysabeau-VariableFont_wght.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+body{
+	background:#e6e6e6;
+	color:#231f20;
+	font-family: 'Ysabeau-VariableFont_wght' , 'Mont', sans-serif;
+	font-size:16px;
+}
+
 body{
 	background:#eeeeef;
 	color:#000;
@@ -44,7 +59,14 @@ input.form-control, select.form-control{
 h1{
 	color:#231f20;
 }
-
+h1,h2{
+	font-family: 'Bebas Neue' !important;
+	letter-spacing :1px;
+	
+}
+h2{
+	color: #ee1c25 !important;
+}
 label {
     display: inline-block;
     /*margin-bottom: .5rem;*/
