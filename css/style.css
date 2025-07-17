@@ -37,7 +37,7 @@ p,span,a,label,li, input::placeholder{
 	color:#000;
 }
 .input_field{
-	padding:8px 0;
+	padding:3px 0;
 }
 input,select{
     padding: 5px;
@@ -71,6 +71,7 @@ h2{
 label {
     display: inline-block;
     /*margin-bottom: .5rem;*/
+	margin-bottom: 0;
 	font-weight:bold;
     text-align: left;
 	font-size:16px;
@@ -208,7 +209,11 @@ form{
 	padding: 7px 0;
 	*/
 }
-
+.row_headings label , .row_headings div{
+	
+	margin-bottom:0;
+	padding-bottom:0;
+}
 .form-control:disabled, .form-control[readonly] {
     background-color: #a83334;
     opacity: 1;
@@ -333,7 +338,7 @@ select, #cmd{
 	width: 32px;
     height: 32px;
 }
-.btn_minus {
+.btn_minus , .minus {
 	font-size:26px;
 }
 .plus:hover,.btn_plus:hover{
@@ -396,7 +401,7 @@ button, input, optgroup, select, textarea {
 	border:0;
 	border-radius:0;
 	/*min-width:40px;*/
-	padding: 4px 7px;
+	padding: 6px 7px;
 	cursor:pointer;
 }
 .btn_l_c.active, .taxation_btn_l_c.active{
