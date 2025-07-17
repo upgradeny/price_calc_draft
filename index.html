@@ -115,15 +115,13 @@
 					<h2 class="text-left inline_block text_upper">Cabinet Information</h2>
 				</div>	
 				
-				<div id="list_prices">
+				<div class="row_headings">
 					<div class="row input_field price_fields">
 						<div class="col-md-3">
 							<label>
 								Group A
 							</label>
-							<div class="input_field_n_dollar">
-								<input type="text" id="description_1" class="number_req form-control description" name ="description_1" value="Cabinets"/>
-							</div>	
+							
 						</div>
 						
 						<div class="col-md-4">
@@ -131,6 +129,45 @@
 								<label>
 									Vendor
 								</label>
+								
+							</div>
+						</div>
+						
+						
+						
+						
+						<div class="col-md-2">
+							<label>
+								Price<span class="red"> * </span>
+							</label>
+							
+						</div>
+						
+						<div class="col-md-2">
+							
+							<label>
+								&nbsp;
+							</label>
+							
+						</div>
+							
+						
+						<div class="col-md-1"><label>&nbsp;</label></div>
+					</div>
+				</div>
+				
+				<div id="list_prices">
+					<div class="row input_field price_fields">
+						<div class="col-md-3">
+							
+							<div class="input_field_n_dollar">
+								<input type="text" id="description_1" class="number_req form-control description" name ="description_1" value="Cabinets"/>
+							</div>	
+						</div>
+						
+						<div class="col-md-4">
+							<div class="select_field main_units">
+							
 								<select id="main_unit" name ="main_unit" class="main_unit_dropdown" required="required">
 									<option name="" value="">Please Select Vendor</option>
 									<option name="Adornus" value="0.34" data-upcharge="215" data-surcharge="1"> Adornus </option>
@@ -156,9 +193,7 @@
 						
 						
 						<div class="col-md-2">
-							<label>
-								Price<span class="red"> * </span>
-							</label>
+							
 							<div class="input_field_n_dollar">
 								<span class="dollar_sign"> $ </span>
 								<input type="text" id="list_price_1" class="number_req form-control list_price" name ="list_price_1" value="" required="required"/>
@@ -167,9 +202,7 @@
 						
 						<div class="col-md-2">
 							
-							<label>
-								&nbsp;
-							</label>
+							
 							<div class="flex_subdiv">
 								<label class="btn btn-secondary btn_l_c active" for="option1" >
 									<input type="radio" class="btn-check list_price_option" name="list_price_options" autocomplete="off" value="L" required="required" checked="checked"/>
@@ -189,10 +222,10 @@
 							</div>
 							
 						</div>
-						<div class="col-md-1 plus_minus_div"><label>&nbsp;</label><button type="button" class="plus" id="plus_prices"> + </button></div>
+						<div class="col-md-1 plus_minus_div"><button type="button" class="plus" id="plus_prices"> + </button></div>
 					</div>
 				</div>
-				
+				<br/>
 				<div class="col-sm-12 no_padding clickable_heading" id="specialities_heading_div">
 					<h2 class="text-left inline_block text_upper">Specialities</h2>
 				</div>
@@ -328,7 +361,6 @@
 			</table>	
 		</div>
 	</div>
-	03295841481
 	
 	<div id="editor">
 	
