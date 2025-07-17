@@ -84,7 +84,7 @@ $(document).ready(function(){
 							'<input type="text" id="" class="number_req form-control list_price" name ="" value=""/>' + 
 						'</div>' + 	
 					'</div>' + 
-					'<div class="col-md-1"> <label>&nbsp;</label> <button type="button" class="minus"> - </button></div>' + 
+					'<div class="col-md-1 plus_minus_div"> <label>&nbsp;</label> <button type="button" class="minus"> - </button></div>' + 
 				'</div>';
 				
 				function acessories_markup_items(num1){
@@ -121,7 +121,7 @@ $(document).ready(function(){
 								'<option name="" value="2.15"> 115% </option>' +
 							'</select>' +								
 						'</div>' +
-						'<div class="col-md-1"><label>&nbsp;</label><button type="button" class="btn_minus acessories_markup_minus"> - </button></div>' +
+						'<div class="col-md-1 plus_minus_div"><label>&nbsp;</label><button type="button" class="btn_minus acessories_markup_minus"> - </button></div>' +
 					'</div>'
 				}
 				
@@ -189,7 +189,7 @@ $(document).ready(function(){
 					
 					
 					
-					'<div class="col-md-1"> <button type="button" class="minus"> - </button></div>' + 
+					'<div class="col-md-1 plus_minus_div"> <button type="button" class="minus"> - </button></div>' + 
 				'</div>';
 					
 				}
@@ -216,7 +216,7 @@ $(document).ready(function(){
 								'<input type="text" id="speciality_item_1" class="number_req form-control speciality_item_price " name ="speciality_item_price_1" value=""/>' +
 							'</div>	' +
 						'</div>' +
-						'<div class="col-md-1"> <button type="button" class="btn_minus speciality_item_minus"> - </button></div>' + 
+						'<div class="col-md-1 plus_minus_div"> <button type="button" class="btn_minus speciality_item_minus"> - </button></div>' + 
 					'</div>';
 					
 				}
@@ -227,46 +227,19 @@ $(document).ready(function(){
 				
 				function accessories_dropdown(ac_d_num1){
 					return '<div class="row input_field speciality_item_fields">' +
-						'<div class="col-md-2">' +
+						'<div class="col-md-3">' +
 							'<div class="input_field_n_dollar">' +
 								'<input type="number" id="acessories_qty_1" class="number_req form-control acessories_qty" name ="acessories_qty_1" placeholder="Qty"/>' +
 							'</div>	' +
 						'</div>' +
-						'<div class="col-md-5">' +
-							'<select id="" name ="" required="required" class="acessories_dropdown_list">' +
-								'<option name="" value="">Please Select Acessory</option>' +
-								'<option name="" value="171.70" data-list-price="401.64" data-cost-price="" data-retail_percent="15" data-model="502.56.842"> Trash Pullout - double 52 qt (champagne) </option>' +
-								'<option name="" value="174.44" data-list-price="408.05" data-cost-price="" data-retail_percent="15" data-model="502.56.942" > Trash Pullout - double 52 qt (grey) </option>' +
-								'<option name="" value="189.36" data-list-price="442.94" data-cost-price="" data-retail_percent="15" data-model="502.56.242"> Trash Pullout - double 52 qt (white) </option>' +
-								'<option name="" value="148.00" data-list-price="346.20" data-cost-price="" data-retail_percent="15" data-model="502.56.840"> Trash Pullout - double 36 qt (champagne) </option>' +
-								'<option name="" value="148.00" data-list-price="346.20" data-cost-price="" data-retail_percent="15" data-model="502.56.940"> Trash Pullout - double 36 qt (grey) </option>' +
-								'<option name="" value="153.24" data-list-price="358.46" data-cost-price="" data-retail_percent="15" data-model="502.56.240"> Trash Pullout - double 36 qt (white) </option>' +
-								'<option name="" value="92.48" data-list-price="216.34" data-cost-price="" data-retail_percent="25" data-model="556.99.117"> Spice Tray Insert (23.5" - birch) </option>' +
-								'<option name="" value="75.22" data-list-price="175.94" data-cost-price="" data-retail_percent="25" data-model="556.99.114"> Spice Tray Insert (15.25" - birch) </option>	' +													
-								'<option name="" value="78.09" data-list-price="182.66" data-cost-price="" data-retail_percent="20" data-model="556.99.107" > Cutlery Divider Insert (23.5" - birch) </option>' +
-								
-								'<option name="" value="64.20" data-list-price="150.17" data-cost-price="" data-retail_percent="20" data-model="556.99.104"> Cutlery Divider Insert (15.25" - birch) </option>' +
-								
-								'<option name="" value="126.92" data-list-price="296.90" data-cost-price="" data-retail_percent="15" data-model="545.48.239"> Undersink Wire Pullout</option>' +
-								
-								'<option name="" value="190.92" data-list-price="318.19" data-cost-price="" data-retail_percent="10" data-model="515.02.140"> Undersink Removable Sliding Baskets</option>' +
-								
-								'<option name="" value="86.52" data-list-price="141.78" data-cost-price="" data-retail_percent="25" data-model="54410C1"> Undersink Cleaning Caddy</option>' +
-								
-								'<option name="" value="223.92" data-list-price="523.78" data-cost-price="" data-retail_percent="20" data-model="502.72.705"> Hamper - 2 x 35 qt (Hailo 600mm) </option>' +
-								
-								'<option name="" value="216.92" data-list-price="507.42" data-cost-price="" data-retail_percent="20" data-model="502.72.722"> Hamper - 2 x 35 qt (Hailo 450mm) </option>' +
-								
-							'</select>	' +
-						'</div>' +
-						'<div class="col-md-2">' +
+						'<div class="col-md-4">' +
 							
 							'<div class="input_field_n_dollar">' +
 								'<span class="dollar_sign"> $ </span>' +
 								'<input type="text" id="acessories_price_item" class="number_req form-control acessories_price_item" name ="acessories_price_item" value="" placeholder="Cost"/>' +
 							'</div>	' +
 						'</div>' +
-						'<div class="select_field col-md-2 acessories_markup_main_units">' +
+						'<div class="select_field col-md-4 acessories_markup_main_units">' +
 							
 							'<select class="acessories_markup_select" name ="acessories_markup_select" id="acessories_markup_select">' +
 								'<option name="" value=""> Upcharge </option>' +
@@ -279,7 +252,7 @@ $(document).ready(function(){
 								'<option name="" value="2.15"> 115% </option>' +
 							'</select>' +								
 						'</div>' +
-						'<div class="col-md-1"><button type="button" class="btn_minus acessories_minus"> - </button></div>' +
+						'<div class="col-md-1 plus_minus_div"><button type="button" class="btn_minus acessories_minus"> - </button></div>' +
 					'</div>';
 				}
 			
@@ -596,7 +569,7 @@ $(document).ready(function(){
 					}
 				});
 				
-				
+				/*
 				$('.acessories_dropdown_list').each(function () {
 					
 					if( jQuery(this).val() ) 
@@ -632,18 +605,12 @@ $(document).ready(function(){
 													'<td> '  + ' - ' + ' </td>' +
 												'</tr>';
 
-						
-						/*
-						print_acessory_table_sub +=  '<tr>' + 
-													'<td>' + $(this).find('option:selected').text() + ' )</td>' +
-													'<td> ' + qty + ' </td>' +
-												'</tr>';
-												*/
+	
 					}
 				
 				});
 				
-				
+				*/
 				/*
 				console.log("totalCost" , totalCost);
 				$('.acessories_price_item').each(function () {
