@@ -229,7 +229,7 @@ $(document).ready(function(){
 					return '<div class="row input_field speciality_item_fields">' +
 						'<div class="col-md-3">' +
 							'<div class="input_field_n_dollar">' +
-								'<input type="number" id="acessories_qty_1" class="number_req form-control acessories_qty" name ="acessories_qty_1" placeholder="Qty"/>' +
+								'<input type="number" id="acessories_qty_1" class="number_req form-control acessories_qty" name ="acessories_qty_1" value="1" placeholder="Qty"/>' +
 							'</div>	' +
 						'</div>' +
 						'<div class="col-md-4">' +
