@@ -199,22 +199,30 @@ $(document).ready(function(){
 				function specialityItem(sp_num1){
 					
 					return '<div class="row input_field speciality_item_fields flex_row justify_space_btw">' +
-						'<div class="col-md-7 flex_row just_start gap_20">' +
-							'<label>' +
-								'Speciality Items' +
-							'</label>' +
+						'<div class="col-md-3 flex_row just_start gap_20">' +
+							
 							'<div class="input_field_n_dollar">' +
 								'<input type="text" id="speciality_item_1" class="number_req form-control speciality_item description" name ="speciality_item_1" value="Cabinets"/>' +
 							'</div>	' +
 						'</div>' +
-						'<div class="col-md-4 flex_row no_padding_r just_start gap_20">' +
-							'<label class="flex_row">' +
-								'Price <span class="red"> &nbsp; </span>' +
-							'</label>' +
+						'<div class="col-md-3 flex_row no_padding_r just_start gap_20">' +
 							'<div class="input_field_n_dollar">' +
 								'<span class="dollar_sign"> $ </span>' +
-								'<input type="text" id="speciality_item_1" class="number_req form-control speciality_item_price " name ="speciality_item_price_1" value=""/>' +
+								'<input type="text" id="speciality_item_1" class="number_req form-control speciality_item_price " name ="speciality_item_price_1" value="" placeholder="Price"/>' +
 							'</div>	' +
+						'</div>' +
+						'<div class="select_field col-md-3 speciality_main_units">' +
+							
+							'<select class="speciality_markup_select" name ="speciality_markup_select" id="speciality_markup_select">' +
+								'<option name="" value=""> Upcharge </option>' +
+								'<option name="" value="1.5"> 50% </option>' +
+								'<option name="" value="1.6"> 60% </option>' +
+								'<option name="" value="1.7"> 70% </option>' +
+								'<option name="" value="1.8"> 80% </option>' +
+								'<option name="" value="1.9"> 90% </option>' +
+								'<option name="" value="2.0" > 100% </option>' +
+								'<option name="" value="2.15" selected> 115% </option>' +
+							'</select>' +								
 						'</div>' +
 						'<div class="col-md-1 plus_minus_div"> <button type="button" class="btn_minus speciality_item_minus"> - </button></div>' + 
 					'</div>';
@@ -507,9 +515,10 @@ $(document).ready(function(){
 					
 					if( jQuery(this).val() ) 
 					{
-						var speciality_item_upcharge = 1;
+						
 						var speciality_item_element = jQuery(this).parent().parent().parent();
 						var speciality_item_cost_price = round_2_digits(  Number( jQuery(this).val() ) );
+						var speciality_item_upcharge =  Number( speciality_item_element.find('.speciality_markup_select option:selected').val() );
 						var speciality_item_retail_price = round_2_digits(  speciality_item_cost_price * speciality_item_upcharge );
 							console.log("totalCost" , totalCost);
 						totalCost += speciality_item_cost_price;
@@ -521,7 +530,7 @@ $(document).ready(function(){
 													'<td> N/A </td>' +
 													'<td> $' + speciality_item_cost_price + ' </td>' +
 													'<td> ' + '  ' + ' </td>' +
-													'<td> ' + '  ' + ' </td>' +
+													'<td> '  + speciality_item_upcharge + ' </td>' +
 													'<td> ' + '  ' + ' </td>' +
 													'<td> ' + '  ' + ' </td>' +
 												'</tr>';
