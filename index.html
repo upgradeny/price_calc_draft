@@ -50,7 +50,13 @@
 								Name
 							</label>
 							<div class="">
-								<input type="text" id="main_name" class="number_req form-control main_name" name ="main_name" value=""/>
+								<input type="text" id="main_name" list="list_box_style" class="number_req form-control main_name" name ="main_name" value=""/>
+								<datalist id="list_box_style">
+									<option>Faigy</option>
+									<option>Rivka</option>
+									<option>Aliza</option>
+									<option>Gladys</option>
+								</datalist>
 							</div>	
 						</div>	
 						
@@ -230,13 +236,13 @@
 					<h2 class="text-left inline_block text_upper">Special Items</h2>
 				</div>
 				<div id="speciality_items" class="toggle_list">
-					<div class="row input_field speciality_item_fields flex_row justify_space_btw">
-						<div class="col-md-3 flex_row just_start gap_20">
+					<div class="row input_field speciality_item_fields flex_row">
+						<div class="col-md-3 flex_row just_start">
 							<div class="input_field_n_dollar">
 								<input type="text" id="speciality_item_1" class="number_req form-control speciality_item description" name ="speciality_item_1" value="Cabinets"/>
 							</div>	
 						</div>
-						<div class="col-md-3 flex_row no_padding_r just_start gap_20">
+						<div class="col-md-4">
 							<!--<label class="flex_row">
 								Price
 							</label>-->
@@ -245,7 +251,7 @@
 								<input type="text" id="speciality_item_1" class="number_req form-control speciality_item_price" name ="speciality_item_price_1" value="" placeholder="Price"/>
 							</div>	
 						</div>
-						<div class="select_field col-md-3 speciality_main_units">
+						<div class="select_field col-md-4 speciality_main_units">
 							
 							<select class="speciality_markup_select" name ="speciality_markup_select" id="speciality_markup_select">
 								<option name="" value=""> Upcharge </option>
