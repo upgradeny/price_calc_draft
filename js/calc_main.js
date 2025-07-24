@@ -198,20 +198,20 @@ $(document).ready(function(){
 				
 				function specialityItem(sp_num1){
 					
-					return '<div class="row input_field speciality_item_fields flex_row justify_space_btw">' +
-						'<div class="col-md-3 flex_row just_start gap_20">' +
+					return '<div class="row input_field speciality_item_fields flex_row">' +
+						'<div class="col-md-3 flex_row just_start">' +
 							
 							'<div class="input_field_n_dollar">' +
 								'<input type="text" id="speciality_item_1" class="number_req form-control speciality_item description" name ="speciality_item_1" value="Cabinets"/>' +
 							'</div>	' +
 						'</div>' +
-						'<div class="col-md-3 flex_row no_padding_r just_start gap_20">' +
+						'<div class="col-md-4">' +
 							'<div class="input_field_n_dollar">' +
 								'<span class="dollar_sign"> $ </span>' +
 								'<input type="text" id="speciality_item_1" class="number_req form-control speciality_item_price " name ="speciality_item_price_1" value="" placeholder="Price"/>' +
 							'</div>	' +
 						'</div>' +
-						'<div class="select_field col-md-3 speciality_main_units">' +
+						'<div class="select_field col-md-4 speciality_main_units">' +
 							
 							'<select class="speciality_markup_select" name ="speciality_markup_select" id="speciality_markup_select">' +
 								'<option name="" value=""> Upcharge </option>' +
@@ -424,10 +424,10 @@ $(document).ready(function(){
 				// saving pdf html in variables , which will later be appended in html for pdf print
 				
 				let print_project_info = '<table id="input_data_table_2" class="table_print_pdf"> ' + 
-										'<tr><td class=""> Name : ' + name +  ' </td>'+
+										'<tr><td class=""> Project : ' + projectName +  ' </td> ' + 
 										'<td> Shipping : $' + numberWithCommas(shipping) + ' </td>' +
 										'</tr>' + 
-										'<tr><td class=""> Project Name : ' + projectName +  ' </td> ' + 
+										'<tr><td class=""> Name : ' + name +  ' </td>'+
 										'<td> Client Scale : ' + $('#discount option:selected').text() + ' </td>' + 
 										'</tr>' +  
 										'</table><div class="br_line"><br/></div>';
