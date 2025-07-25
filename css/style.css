@@ -421,6 +421,14 @@ button, input, optgroup, select, textarea {
 #cmd{
 	background:#eb2227;
 }
+#resultsTable .retail td#cmd_td:hover{
+	background:#000;
+	color:#fff;
+}
+#resultsTable .retail td#cmd_td:hover #cmd{
+	background:#000;
+	color:#fff;
+}
 */
 
 #resultsTable .retail td#cmd_td
@@ -432,19 +440,15 @@ button, input, optgroup, select, textarea {
 }
 #cmd
 {
-    background: #ececec !important;
+    background: #ececec;
     width: auto;
     font-size: 18px;
     display: inline-block;
     padding: 5px;
-    color: #000;
+    color: #676161;
 }
-#resultsTable .retail td#cmd_td:hover{
-	background:#000;
-	color:#fff;
+#cmd:hover{
+	color:#000;
 }
-#resultsTable .retail td#cmd_td:hover #cmd{
-	background:#000;
-	color:#fff;
-}
+
 
