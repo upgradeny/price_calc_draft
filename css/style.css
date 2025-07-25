@@ -413,3 +413,15 @@ button, input, optgroup, select, textarea {
 	padding:5px 10px;
 	
 }
+#cmd svg {
+    width: auto;
+    height: 24px;
+}
+#cmd {
+    background: #eb2227;
+    width: auto;
+    font-size: 18px;
+}
+#resultsTable{
+	min-width:auto;
+}
