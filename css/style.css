@@ -196,6 +196,9 @@ h2 {
 .toggle_list{
 	display:none;
 }
+#cabinet_info_heading_div{
+	margin-top:10px;
+}
 form{
 	padding:15px 0 25px;
 	margin: 0 auto;
@@ -443,3 +446,4 @@ button, input, optgroup, select, textarea {
 #resultsTable .retail td#cmd_td:hover #cmd{
 	color:#fff;
 }
+
