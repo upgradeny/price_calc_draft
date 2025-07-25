@@ -286,13 +286,7 @@ select, #cmd{
 #price_calc_btn{
 	width:100%;
 }
-#cmd{
-	background:#eb2227;
-}
-#cmd:hover{
-	background:#eeeeef;
-	color:#000;
-}
+
 .flex_row{
 	display:flex;
 }
@@ -417,11 +411,32 @@ button, input, optgroup, select, textarea {
     width: auto;
     height: 24px;
 }
-#cmd {
-    background: #eb2227;
-    width: auto;
-    font-size: 18px;
-}
 #resultsTable{
 	min-width:auto;
+}
+/*
+#cmd{
+	background:#eb2227;
+}
+*/
+
+#resultsTable .retail td#cmd_td
+{
+	padding: 0 10px;
+    margin: 0;
+    vertical-align: middle;
+    background: #ececec;
+}
+#cmd
+{
+    background: #ececec !important;
+    width: auto;
+    font-size: 18px;
+    display: inline-block;
+    padding: 5px;
+    color: #000;
+}
+#cmd:hover{
+	background:#000;
+	color:#fff;
 }
