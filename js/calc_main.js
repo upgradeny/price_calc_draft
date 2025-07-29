@@ -501,9 +501,9 @@ $(document).ready(function(){
 												'<td> ' + LP_check + ' </td>' +
 												'<td> $' + numberWithCommas( round_2_digits(price + shipping_part + modificationprice) ) + ' </td>' +
 												'<td class="pdf_font_small pdf_width_small"> ' + list_price_element.find('.main_unit_dropdown option:selected').text() + ' </td>' +
-												'<td class=" pdf_width_small"> ' + upCharge + ' </td>' +
-												'<td class=" pdf_width_small"> ' + vendor + ' </td>' +
-												'<td class=" pdf_width_small"> ' + vendorSurcharge + ' </td>' +
+												'<td class="pdf_font_small pdf_width_small"> ' + upCharge + ' </td>' +
+												'<td class="pdf_font_small pdf_width_small"> ' + vendor + ' </td>' +
+												'<td class="pdf_font_small pdf_width_small"> ' + vendorSurcharge + ' </td>' +
 											'</tr>';
 					
 					cnt1++;
@@ -532,9 +532,9 @@ $(document).ready(function(){
 													'<td> N/A </td>' +
 													'<td> $' + speciality_item_cost_price + ' </td>' +
 													'<td class="pdf_font_small pdf_width_small"> ' + '  ' + ' </td>' +
-													'<td class=" pdf_width_small"> '  + speciality_item_upcharge + ' </td>' +
-													'<td class=" pdf_width_small"> ' + '  ' + ' </td>' +
-													'<td class=" pdf_width_small"> ' + '  ' + ' </td>' +
+													'<td class="pdf_font_small pdf_width_small"> '  + speciality_item_upcharge + ' </td>' +
+													'<td class="pdf_font_small pdf_width_small"> ' + '  ' + ' </td>' +
+													'<td class="pdf_font_small pdf_width_small"> ' + '  ' + ' </td>' +
 												'</tr>';
 					}
 				});
@@ -572,9 +572,9 @@ $(document).ready(function(){
 													'<td> N/A </td>' +
 													'<td> $' + acessories_item_cost_price + ' </td>' +
 													'<td class="pdf_font_small pdf_width_small"> '  + ' - ' + ' </td>' +
-													'<td class=" pdf_width_small"> '  + acessories_item_markup_value + ' </td>' +
-													'<td class=" pdf_width_small"> - </td>' +
-													'<td class=" pdf_width_small"> '  + ' - ' + ' </td>' +
+													'<td class="pdf_font_small pdf_width_small"> '  + acessories_item_markup_value + ' </td>' +
+													'<td class="pdf_font_small pdf_width_small"> - </td>' +
+													'<td class="pdf_font_small pdf_width_small"> '  + ' - ' + ' </td>' +
 												'</tr>';
 												
 					}
