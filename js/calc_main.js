@@ -811,7 +811,7 @@ $(document).ready(function(){
 									'</table>' +
 									'<div class="table_print_1">' +
 										'<br/>' +
-										'<h2>Project : ' + projectName +  '</h2>' +
+										'<h2>' + projectName +  '</h2>' +
 										'<br/>' +
 									'</div>';
 				
