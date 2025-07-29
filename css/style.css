@@ -196,11 +196,11 @@ h2 {
 .toggle_list{
 	display:none;
 }
-#cabinet_info_heading_div{
+#cabinet_info_heading_div , .clickable_heading {
 	margin-top:10px;
 }
 form{
-	padding:15px 0 25px;
+	padding:0 0 25px;
 	margin: 0 auto;
 	width:100%;
 }
