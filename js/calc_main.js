@@ -426,7 +426,7 @@ $(document).ready(function(){
 				// saving pdf html in variables , which will later be appended in html for pdf print
 				
 				let print_project_info = '<table id="input_data_table_2" class="table_print_pdf"> ' + 
-										'<tr><td class=""> Floor Plan : ' + floor_plan +  ' </td> ' + 
+										'<tr><td class=""> Floor Plan # ' + floor_plan +  ' </td> ' + 
 										'<td> Shipping : $' + numberWithCommas(shipping) + ' </td>' +
 										'</tr>' + 
 										'<tr><td class=""> Name : ' + name +  ' </td>'+
