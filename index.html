@@ -60,29 +60,17 @@
 								</datalist>
 							</div>	
 						</div>	
-						
-						<div class="flex_row taxable_div">
-							<div class="col-sm-4 no_padding">
+
+						<div class="flex_row">
 							<label>
-								Taxable<span class="red"> * </span>
+								Floor Plan #
 							</label>
+							<div class="">
+								<input type="text" id="floor_plan" class="number_req form-control floor_plan" name ="floor_plan" value=""/>
 							</div>
-							<div class="flex_subdiv col-sm-5 no_padding">
-								<label class="btn btn-secondary taxation_btn_l_c" for="option1" >
-									<input type="radio" class="btn-check list_price_option" name="taxation_options" autocomplete="off" value="1" required="required"/>
-									Yes
-								</label>
-								<label class="btn btn-secondary taxation_btn_l_c disabled active" for="option0" onclick="">
-									<input type="radio" class="btn-check list_price_option neutral" name="taxation_options0" autocomplete="off" value="0" disabled="disabled" checked="checked"/>
-								</label>
-							   <label class="btn btn-secondary taxation_btn_l_c " for="option2">
-									<input type="radio" class="btn-check list_price_option" name="taxation_options" autocomplete="off" value="0" required="required" />
-									NO
-								</label>
-
-							</div>
-
 						</div>
+						
+						
 					</div>
 					<div class="col-md-6 project_info">
 							
@@ -112,13 +100,25 @@
 							</div>							
 						</div>
 						
-						<div class="flex_row">
+						<div class="flex_row taxable_div">
+							<div class="col-sm-4 no_padding">
 							<label>
-								Floor Plan
+								Taxable<span class="red"> * </span>
 							</label>
-							<div class="">
-								<input type="text" id="floor_plan" class="number_req form-control floor_plan" name ="floor_plan" value=""/>
 							</div>
+							<div class="flex_subdiv col-sm-5 no_padding">
+								<label class="btn btn-secondary taxation_btn_l_c" for="option1" >
+									<input type="radio" class="btn-check list_price_option" name="taxation_options" autocomplete="off" value="1" required="required" checked="checked"/>
+									Yes
+								</label>
+								
+							   	<label class="btn btn-secondary taxation_btn_l_c " for="option2">
+									<input type="radio" class="btn-check list_price_option" name="taxation_options" autocomplete="off" value="0" required="required" />
+									NO
+								</label>
+
+							</div>
+
 						</div>
 						
 						
