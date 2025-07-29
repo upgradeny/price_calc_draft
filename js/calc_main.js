@@ -396,6 +396,8 @@ $(document).ready(function(){
 				
 				let name = jQuery('#main_name').val();  // Deal Owner
 				let projectName = jQuery('#project_name').val(); // Project
+				let floor_plan = jQuery('#floor_plan').val();
+				
 				
 				//let vendor = Number( jQuery('#main_unit').val() );
 				//let upCharge = Number( jQuery('#main_unit option:selected').attr('data-upcharge') )/100;
@@ -424,7 +426,7 @@ $(document).ready(function(){
 				// saving pdf html in variables , which will later be appended in html for pdf print
 				
 				let print_project_info = '<table id="input_data_table_2" class="table_print_pdf"> ' + 
-										'<tr><td class=""> Project : ' + projectName +  ' </td> ' + 
+										'<tr><td class=""> Floor Plan : ' + floor_plan +  ' </td> ' + 
 										'<td> Shipping : $' + numberWithCommas(shipping) + ' </td>' +
 										'</tr>' + 
 										'<tr><td class=""> Name : ' + name +  ' </td>'+
@@ -438,10 +440,10 @@ $(document).ready(function(){
 												'<td>Retail</td>' +
 												'<td>List</td>' +
 												'<td>Cost</td>' +
-												'<td>Vendor</td>' +
-												'<td>Upcharge</td>' +
-												'<td>Multiplier</td>' +
-												'<td>Surcharge</td>' +
+												'<td class="pdf_font_small pdf_width_small">Vendor</td>' +
+												'<td class="pdf_font_small pdf_width_small">Upcharge</td>' +
+												'<td class="pdf_font_small pdf_width_small">Multiplier</td>' +
+												'<td class="pdf_font_small pdf_width_small">Surcharge</td>' +
 											'</tr>';
 											
 				//let print_input_data = '<table id="input_data_table_4" class="table_print_pdf">';
@@ -498,10 +500,10 @@ $(document).ready(function(){
 												'<td> $' + numberWithCommas( round_2_digits( Number( price_func_arr[1] ) - Number( price_func_arr[1] ) * discount + shipping_part + modificationprice ) ) + ' </td>' +
 												'<td> ' + LP_check + ' </td>' +
 												'<td> $' + numberWithCommas( round_2_digits(price + shipping_part + modificationprice) ) + ' </td>' +
-												'<td> ' + list_price_element.find('.main_unit_dropdown option:selected').text() + ' </td>' +
-												'<td> ' + upCharge + ' </td>' +
-												'<td> ' + vendor + ' </td>' +
-												'<td> ' + vendorSurcharge + ' </td>' +
+												'<td class="pdf_font_small pdf_width_small"> ' + list_price_element.find('.main_unit_dropdown option:selected').text() + ' </td>' +
+												'<td class=" pdf_width_small"> ' + upCharge + ' </td>' +
+												'<td class=" pdf_width_small"> ' + vendor + ' </td>' +
+												'<td class=" pdf_width_small"> ' + vendorSurcharge + ' </td>' +
 											'</tr>';
 					
 					cnt1++;
@@ -529,10 +531,10 @@ $(document).ready(function(){
 													'<td> $' + speciality_item_retail_price + ' </td>' +
 													'<td> N/A </td>' +
 													'<td> $' + speciality_item_cost_price + ' </td>' +
-													'<td> ' + '  ' + ' </td>' +
-													'<td> '  + speciality_item_upcharge + ' </td>' +
-													'<td> ' + '  ' + ' </td>' +
-													'<td> ' + '  ' + ' </td>' +
+													'<td class="pdf_font_small pdf_width_small"> ' + '  ' + ' </td>' +
+													'<td class=" pdf_width_small"> '  + speciality_item_upcharge + ' </td>' +
+													'<td class=" pdf_width_small"> ' + '  ' + ' </td>' +
+													'<td class=" pdf_width_small"> ' + '  ' + ' </td>' +
 												'</tr>';
 					}
 				});
@@ -569,10 +571,10 @@ $(document).ready(function(){
 													'<td> $' + acessories_item_markup_price + ' </td>' +
 													'<td> N/A </td>' +
 													'<td> $' + acessories_item_cost_price + ' </td>' +
-													'<td> '  + ' - ' + ' </td>' +
-													'<td> '  + acessories_item_markup_value + ' </td>' +
-													'<td> - </td>' +
-													'<td> '  + ' - ' + ' </td>' +
+													'<td class="pdf_font_small pdf_width_small"> '  + ' - ' + ' </td>' +
+													'<td class=" pdf_width_small"> '  + acessories_item_markup_value + ' </td>' +
+													'<td class=" pdf_width_small"> - </td>' +
+													'<td class=" pdf_width_small"> '  + ' - ' + ' </td>' +
 												'</tr>';
 												
 					}
@@ -777,10 +779,10 @@ $(document).ready(function(){
 										'<td class="text-bold"> $' + numberWithCommas( round_2_digits( clientPrice ) ) + ' </td>' +
 										'<td class="text-bold"> $' + numberWithCommas( round_2_digits( listprice ) ) + ' </td>' +
 										'<td class="text-bold"> $' +  numberWithCommas( round_2_digits(totalCost) ) + ' </td>' +
-										'<td> ' + '  ' + ' </td>' +
-										'<td> ' + '  ' + ' </td>' +
-										'<td> ' + '  ' + ' </td>' +
-										'<td> ' + '  ' + ' </td>' +
+										'<td class="pdf_font_small pdf_width_small"> ' + '  ' + ' </td>' +
+										'<td class="pdf_font_small pdf_width_small"> ' + '  ' + ' </td>' +
+										'<td class="pdf_font_small pdf_width_small"> ' + '  ' + ' </td>' +
+										'<td class="pdf_font_small pdf_width_small"> ' + '  ' + ' </td>' +
 									'</tr>';
 									
 				print_cost_table += print_cost_table_sub;
@@ -809,7 +811,7 @@ $(document).ready(function(){
 									'</table>' +
 									'<div class="table_print_1">' +
 										'<br/>' +
-										'<h2>Result</h2>' +
+										'<h2>Project : ' + projectName +  '</h2>' +
 										'<br/>' +
 									'</div>';
 				
